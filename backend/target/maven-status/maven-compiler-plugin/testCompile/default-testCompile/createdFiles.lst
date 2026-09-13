@@ -1,0 +1,3 @@
+com\example\youtubeextractor\service\YouTubePlaylistServiceTest.class
+com\example\youtubeextractor\util\YouTubeUrlParserTest.class
+com\example\youtubeextractor\controller\PlaylistControllerTest.class
