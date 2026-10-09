@@ -35,7 +35,7 @@ public class YouTubeApiClient {
      */
     public YouTubePlaylistItemListResponse fetchPlaylistItemsPage(String playlistId, String pageToken) {
         if (!youTubeConfig.isApiKeyConfigured()) {
-            throw new IllegalStateException("YouTube API key is not configured on the server. Please set the YOUTUBE_API_KEY environment variable.");
+            throw new IllegalStateException("YouTube API key is not configured on the server. Please set the YOUTUBE_API_KEY environment variable or ensure it is located at " + YouTubeConfig.DEFAULT_API_KEY_FILE_PATH);
         }
 
         try {

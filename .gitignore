@@ -1,0 +1,102 @@
+# ==========================================
+# Operating System Files
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# ==========================================
+# Environment & Sensitive Files
+# ==========================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*Youtube_API*.txt
+
+# ==========================================
+# IDE & Editor Files
+# ==========================================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+*.code-workspace
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Antigravity / AI local cache
+.agents/
+.gemini/
+
+# ==========================================
+# Backend (Java / Maven / Spring Boot)
+# ==========================================
+target/
+**/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Logs
+*.log
+logs/
+**/logs/
+
+# Crash dumps
+hs_err_pid*
+replay_pid*
+
+# ==========================================
+# Frontend (Node / Vite / TypeScript)
+# ==========================================
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+dist-ssr/
+**/dist-ssr/
+.vite/
+**/.vite/
+coverage/
+**/coverage/
+
+# Build caches & logs
+.npm/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*

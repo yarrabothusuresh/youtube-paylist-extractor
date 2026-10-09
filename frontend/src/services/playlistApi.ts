@@ -1,6 +1,11 @@
 import { PlaylistExtractRequest, PlaylistExtractResponse, ApiError } from '../types/playlist';
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || '/api';
+const API_BASE =
+  import.meta.env.VITE_API_BASE_URL ||
+  (typeof window !== 'undefined' &&
+  (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? '/api'
+    : 'https://youtube-extractor-backend-124504563966.us-central1.run.app/api');
 
 /**
  * Sends a request to the backend to extract all video URLs from a YouTube playlist.
@@ -26,7 +31,7 @@ export async function extractPlaylistVideos(playlistUrl: string): Promise<Playli
   }
 
   if (!response.ok) {
-    let errorMessage = 'Unable to retrieve playlist videos. Please try again.';
+    let errorMessage = `Request failed (${response.status}). Please try again.`;
     try {
       const errorData: ApiError = await response.json();
       if (errorData && errorData.message) {
